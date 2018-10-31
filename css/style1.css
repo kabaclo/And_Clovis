@@ -1,0 +1,82 @@
+body {
+   margin : 0;
+   padding: 0;
+   background: url('/img/BG_Big.png') no-repeat;
+   background-size: cover;
+   font-family: sans-serif;
+
+}
+.main-menu{
+    display: flex;
+    flex-wrap: wrap;
+}
+.header{
+    flex: 15%;
+    margin-top: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.s-menu{
+    flex:85%;
+}
+nav {
+    width: 100%;
+    background:rgb(45, 148, 189);
+    opacity: .8;
+    color: white;
+}
+ul{
+    width: 80%;
+    margin: 0 auto;
+    padding: 0; 
+}
+ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 20px;
+}
+ul li:hover {
+    background : rgba(17, 68, 238, 0.933);
+}
+ul li a {
+    color :#fff;
+    text-decoration: none;
+}
+.burger {
+    width: 100%;
+    padding: 10px 20px;
+    background: #001f44;
+    text-align: right;
+    box-sizing: border-box;
+    color: #fff;
+    font-size: 20px;
+    display: none;
+}
+@media screen and (max-width:713px){
+    .burger {
+        display: block;
+    }
+
+    ul {
+        width: 100%;
+    }
+    ul li {
+        display: block;
+        text-align: center;
+    }
+    .main-menu{
+        display: none;
+    }
+}
+
+#content {
+    display: block;
+    margin-left : auto;
+    margin-right: auto;
+    width: 50%;
+    height: 60%;
+    border: skyblue 1px dashed;
+    
+}

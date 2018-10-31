@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/style1.css" />
+    <title>SendIT</title>
+</head>
+
+<script>
+    function showMenu() {
+        const mainMenu = document.getElementsByClassName ('main-menu');
+        const displayMenu = mainMenu[0].style.display 
+        var clickButton = document.getElementById ('burger');
+        x = window.matchMedia ("(max-width: 713px)")
+        if (x){
+            if (displayMenu === 'none'){
+            mainMenu[0].style.display =  'block';
+        }
+        else {
+            mainMenu[0].style.display =  'none';
+        }
+
+        }
+       
+    }
+    
+</script>
+<body>
+    
+    <nav>
+        <div class="burger"> 
+        <img onclick="showMenu();" id = 'burger' src="./img/burger.png" style="height:20px; background-color: white" alt="burger icon"/>   
+        </div>
+        <div class="main-menu">
+            <div class="header"> SendIT </div>
+            <div class="s-menu">
+                <ul>
+                    <li><a>Home</a></li>
+                    <li><a>About</a></li>
+                    <li><a>Things to do</a></li>
+                    <li><a>Contact</a></li>
+                    <li><a>News</a></li>
+                </ul>
+            </div>
+    </div>
+    </nav>
+    <div id="content">
+        <h1>Heading goes here</h1>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+             when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+              It has survived not only five centuries, but also the leap into electronic typesetting,
+               remaining essentially unchanged. It was popularised in the 1960s with the release of 
+               Letraset sheets containing Lorem Ipsum passages, 
+            and more recently with desktop publishing software 
+            like Aldus PageMaker including versions of Lorem Ipsum. 
+        </p>
+    </div>
+ 
+</body>
+</html>
