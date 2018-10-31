@@ -1,6 +1,9 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0; 
+}
 body {
-   margin : 0;
-   padding: 0;
    background: url('../img/BG_Big.png') no-repeat;
    background-size: cover;
    font-family: sans-serif;
@@ -90,5 +93,50 @@ ul li a {
         border: skyblue 1px dashed;
         
     }
+    #open_close_menu:checked ~ .main-menu{
+        display: block;
+    }
 }
+#open_close_menu{
+    display: none;
+}
+
+/* form-element styles */
+.form-element{
+    position: relative;
+    height: 40px;
+}
+.form-element input, .form-element label{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 14px;
+}
+.form-element label{
+    transition: transform 0.3s ease-in-out;
+    bottom: 24px;
+    transform: translateY(24px);
+}
+.form-element input{
+    background: transparent;
+    height: 24px;
+    border: none;
+    border-bottom: 1px solid black;
+    outline: transparent;
+}
+.form-element input:focus{
+    border-color: red;
+    color: red;
+}
+.form-element input:focus ~ label{
+    transform: none;
+    color: red;
+}
+label.input-not-empty{
+    transform: none;
+}
+label.input-empty{
+    transform: translateY(24px);
+}
+/*-- end */
 

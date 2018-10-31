@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <form action="#">
+                <h1 class="form-title">form title</h1>
+            
+                <div class="form-element">
+                    <label for="username">Username</label>
+                    <input type="text" name="username" id="username">
+                </div>
+            
+                <div class="form-element">
+                    <label for="password">Password</label>
+                    <input type="text" name="password" id="password">
+                </div>
+                
+                <button>Cancel</button>
+                <button type=submit>Proceed</button>
+            </form>
+            <style>
+                /* form-element styles */
+            .form-element{
+                position: relative;
+            }
+            .form-element input, .form-element label{
+                position: absolute;
+            }
+            .form-element input{
+                background: transparent;
+            }
+            
+            /*-- end */
+            
+            
+            </style>
+</body>
+</html>
