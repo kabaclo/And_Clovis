@@ -53,7 +53,19 @@ ul li a {
     color: #fff;
     font-size: 20px;
     display: none;
+    
 }
+
+#content {
+    display: block;
+    margin-left : auto;
+    margin-right: auto;
+    width: 50%;
+    height: 60%;
+    border: skyblue 1px dashed;
+    
+}
+
 @media screen and (max-width:713px){
     .burger {
         display: block;
@@ -69,14 +81,14 @@ ul li a {
     .main-menu{
         display: none;
     }
+
+    #content {
+        display: block;
+        margin-left : auto;
+        margin-right: auto;
+        width: 100%;
+        border: skyblue 1px dashed;
+        
+    }
 }
 
-#content {
-    display: block;
-    margin-left : auto;
-    margin-right: auto;
-    width: 50%;
-    height: 60%;
-    border: skyblue 1px dashed;
-    
-}
