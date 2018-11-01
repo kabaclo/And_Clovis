@@ -60,12 +60,13 @@ ul li a {
 }
 
 #content {
+    padding: 10px;
     display: block;
     margin-left : auto;
     margin-right: auto;
     width: 50%;
     height: 60%;
-    border: skyblue 1px dashed;
+    border: 2px skyblue  solid;
     
 }
 
@@ -86,11 +87,12 @@ ul li a {
     }
 
     #content {
+        padding: 10px;
         display: block;
         margin-left : auto;
         margin-right: auto;
         width: 100%;
-        border: skyblue 1px dashed;
+        border: 2px skyblue solid;
         
     }
     #open_close_menu:checked ~ .main-menu{
@@ -138,5 +140,35 @@ label.input-not-empty{
 label.input-empty{
     transform: translateY(24px);
 }
+.s-button {
+    margin-top : 10px;
+}
 /*-- end */
 
+/*-- tab-group */
+ .signUpBtn, .loginBtn {
+    display: block;
+    background-color:rgb(78, 187, 230);
+    color: white;
+    padding: 14px 20px;
+    margin:  8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+    margin-right: 2px;
+}
+.signUpBtn:hover{
+    background-color: #001f44;
+}
+
+.loginBtn:hover{
+    background-color: blue;
+}
+
+.tab-signup, .tab-login{
+    float: left;
+    width: 50%;
+}
+
+/*-- end tab-group */

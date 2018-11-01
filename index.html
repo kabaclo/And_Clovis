@@ -33,11 +33,28 @@
     </div>
     </nav>
     <div id="content">
-        <h1>Heading goes here</h1>
+    
   
         <form action="#">
-            <h1 class="form-title">form title</h1>
 
+            <!--Tab menu -->
+            <div class="tab-group">
+                
+                <div class="tab-login">
+                   
+                    <button type="submit" class="loginBtn">  <label for="open_close_loginPg">Log In </label> </button>
+                    
+                </div>
+                
+                <div class="tab-signup">
+                    <button type="button" class="signUpBtn">Sign Up</button>
+                </div>
+                
+            </div>
+
+            <input type="checkbox" id="open_close_loginPg" />
+            <!--Tab menu -->
+            <h1 class="form-title">Login</h1>
             <div class="form-element">
                 <input type="text" name="username" id="username">
                 <label for="username">Username</label>
@@ -47,9 +64,10 @@
                 <input type="text" name="password" id="password">
                 <label for="password">Password</label>
             </div>
-            
-            <button>Cancel</button>
-            <button type=submit>Proceed</button>
+            <div class="s-button">
+                <button>Cancel</button>
+                <button type=submit>Proceed</button>
+            </div>
         </form>
 
     </div>
