@@ -69,6 +69,7 @@ ul li a {
     border: 2px skyblue ;
     
     
+    
 }
 
 #sub-login{
@@ -78,9 +79,7 @@ ul li a {
 #sub-registration{
     display: none;
 }
-#sub-login {
-    display: none;
-}
+
 
 #open_close_loginPg{
     display: none;
@@ -92,10 +91,13 @@ ul li a {
 
 #open_close_loginPg:checked ~ #sub-login{
     display: block;
+    width: 50%;
+    
 }
 
 #open_close_signUp:checked ~ #sub-registration{
     display: block;
+    width: 50%;
 }
 
 
