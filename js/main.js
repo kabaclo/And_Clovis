@@ -22,3 +22,17 @@ const form_elements_int =()=>{
 (function(){
     form_elements_int();
 })();
+
+const showLogin = () => {
+    const loginPg = document.getElementById ('sub-login');
+    const signUp = document.getElementById ('sub-registration');
+    signUp.style.display = 'none';
+    loginPg.style.display = 'block';
+}
+
+const showSignUp = () => {
+    const loginPg = document.getElementById ('sub-login');
+    const signUp = document.getElementById ('sub-registration');
+    loginPg.style.display = 'none';
+    signUp.style.display = 'block';
+}

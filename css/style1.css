@@ -66,9 +66,38 @@ ul li a {
     margin-right: auto;
     width: 50%;
     height: 60%;
-    border: 2px skyblue  solid;
+    border: 2px skyblue ;
+    
     
 }
+
+#sub-login{
+    display: none;
+}
+
+#sub-registration{
+    display: none;
+}
+#sub-login {
+    display: none;
+}
+
+#open_close_loginPg{
+    display: none;
+}
+
+#open_close_signUp{
+    display: none;
+}
+
+#open_close_loginPg:checked ~ #sub-login{
+    display: block;
+}
+
+#open_close_signUp:checked ~ #sub-registration{
+    display: block;
+}
+
 
 @media screen and (max-width:713px){
     .burger {
@@ -85,7 +114,7 @@ ul li a {
     .main-menu{
         display: none;
     }
-
+    
     #content {
         padding: 10px;
         display: block;
