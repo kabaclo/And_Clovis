@@ -92,7 +92,7 @@ ul li a {
 
 #open_close_loginPg:checked ~ #sub-login{
     display: block;
-    width: 50%;
+    width:50%;
     
 }
 
