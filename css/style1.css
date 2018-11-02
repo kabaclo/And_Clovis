@@ -70,7 +70,9 @@ ul li a {
     
     
 }
-
+#open_close_menu{
+    display: none;
+}
 #sub-login{
     display: none;
 }
@@ -98,40 +100,6 @@ ul li a {
     display: block;
     width: 50%;
 
-}
-
-
-@media screen and (max-width:713px){
-    .burger {
-        display: block;
-    }
-
-    ul {
-        width: 100%;
-    }
-    ul li {
-        display: block;
-        text-align: center;
-    }
-    .main-menu{
-        display: none;
-    }
-    
-    #content {
-        padding: 10px;
-        display: block;
-        margin-left : auto;
-        margin-right: auto;
-        width: 100%;
-        border: 2px skyblue solid;
-        
-    }
-    #open_close_menu:checked ~ .main-menu{
-        display: block;
-    }
-}
-#open_close_menu{
-    display: none;
 }
 
 /* form-element styles */
@@ -233,3 +201,40 @@ label.input-empty{
 }
 
 /*-- end styling my table */ 
+
+@media screen and (max-width:713px){
+    .burger {
+        display: block;
+    }
+
+    ul {
+        width: 100%;
+    }
+    ul li {
+        display: block;
+        text-align: center;
+    }
+    .main-menu{
+        display: none;
+    }
+    
+    #content {
+        padding: 10px;
+        display: block;
+        margin-left : auto;
+        margin-right: auto;
+        width: 100%;
+        border: 2px skyblue solid;
+        
+    }
+    #open_close_menu:checked ~ .main-menu{
+        display: block;
+    }
+
+    .tab-login, .tab-signup{
+        
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+ 
