@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/style1.css" />
+    <script defer src="./js/main.js"></script>
+    <title>SendIT</title>
+</head>
+
+<body>
+    
+    <nav>
+        <div class="burger"> 
+        <!-- <img onclick="showMenu();" id = 'burger' src="./img/burger.png" style="height:20px; background-color: white" alt="burger icon"/>    -->
+            <label for="open_close_menu">
+                <img onclick="" id = 'burger' src="./img/burger.png" style="height:20px; background-color: white" alt="burger icon"/>   
+            </label>
+        </div>
+        <input type="checkbox" id="open_close_menu">
+        <div class="main-menu" >
+            <div class="header"> SendIT </div>
+            <div class="s-menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="parcel.html">Parcel</a></li>
+                    <li><a href="reports.html">Reports</a></li>
+                    <li><a href="admin.html">Admin</a></li>
+                
+                </ul>
+            </div>
+    </div>
+    </nav>
+    <div id="content">
+    
+  
+        <form action="#">
+
+            <!--Tab menu -->
+            <div class="tab-group">
+                
+                <div class="tab-login">
+                   
+                    <button onclick="showLogin()" type="submit" class="loginBtn">  
+                        <label for="open_close_loginPg"> All </label>
+                     </button></label>
+                    
+                </div>
+                
+                <div class="tab-signup">
+                    <button onclick= "showSignUp()" type="button" class="signUpBtn">
+                    <label for = "open_close_signUp"> Delivered Parcels </label>    
+                    </button>
+                </div>
+
+                <div class="tab-3">
+                        <button onclick= "showSignUp()" type="button" class="signUpBtn">
+                        <label for = "open_close_signUp"> Parcels In transmit </label>    
+                        </button>
+                </div>
+                
+            </div>
+
+            <input type="checkbox" id="open_close_loginPg" />
+            <input type="checkbox" id="open_close_signUp" />
+
+            <!--Sending a Parcel -->
+
+            <div id="sub-login" style="width:50%;">
+                <!--Tab menu -->
+                <h1 class="form-title"> All  </h1>
+                <table id="parcels">
+                        <tr>
+                          <th>Parcel Id</th>
+                          <th>Parcel details</th>
+                          <th>Weight</th>
+                          <th>Length</th>
+                          <th>From </th>
+                          <th>Destination </th>
+                          <th>Delivery date</th>
+                          <th>Arrival date </th>
+                          <th>Price</th>
+                          <th>Status</th>
+                        </tr>
+                        <tr>
+                          <td>001</td>
+                          <td>SebaMed</td>
+                          <td>0.5 kg </td>
+                          <td> less the 1m </td>
+                          <td>Rwanda</td>
+                          <td>Kenya</td>
+                          <td>1/11/2018</td>
+                          <td>3/11/2018</td>
+                          <td>5$</td>
+                          <td> Delivered </td>
+                          
+                        </tr>
+                        <tr>
+                            <td>002</td>
+                            <td>SebaMed</td>
+                            <td>0.5 kg </td>
+                            <td> less the 1m </td>
+                            <td>Rwanda</td>
+                            <td>Kenya</td>
+                            <td>1/11/2018</td>
+                            <td>3/11/2018</td>
+                            <td>5$</td>
+                            <td> In transmitting </td>
+                                
+                        </tr>
+                        <tr>
+                            <td>003</td>
+                            <td>SebaMed</td>
+                            <td>0.5 kg </td>
+                            <td> less the 1m </td>
+                            <td>Rwanda</td>
+                            <td>Kenya</td>
+                            <td>1/11/2018</td>
+                            <td>3/11/2018</td>
+                            <td>5$</td>
+                            <td> Delivered </td>
+                                    
+                        </tr>
+                        <tr>
+                            <td>004</td>
+                            <td>SebaMed</td>
+                            <td>0.5 kg </td>
+                            <td> less the 1m </td>
+                            <td>Rwanda</td>
+                            <td>Kenya</td>
+                            <td>1/11/2018</td>
+                            <td>3/11/2018</td>
+                            <td>5$</td>
+                            <td> In transmitting </td>
+                                        
+                        </tr>
+                                                                              
+                      </table>   
+            
+
+            
+            </div>
+            <!--End login form-->
+
+            <!--Registration form-->
+
+            <div id="sub-registration" style="width:50%;">
+                <!--Tab menu -->
+                <h1 class="form-title">Parcels</h1>
+                <table id="parcels">
+                        <tr>
+                          <th>Parcel Id</th>
+                          <th>Parcel details</th>
+                          <th>Weight</th>
+                          <th>Length</th>
+                          <th>From </th>
+                          <th>Destination </th>
+                          <th>Delivery date</th>
+                          <th>Arrival date </th>
+                          <th>Price</th>
+                          <th>Action</th>
+                        </tr>
+                        <tr>
+                          <td>001</td>
+                          <td>SebaMed</td>
+                          <td>0.5 kg </td>
+                          <td> less the 1m </td>
+                          <td>Rwanda</td>
+                          <td>Kenya</td>
+                          <td>1/11/2018</td>
+                          <td>3/11/2018</td>
+                          <td>5$</td>
+                          <td>Delivered </td>
+                          
+                        </tr>
+                       
+                        <tr>
+                            <td>003</td>
+                            <td>SebaMed</td>
+                            <td>0.5 kg </td>
+                            <td> less the 1m </td>
+                            <td>Rwanda</td>
+                            <td>Kenya</td>
+                            <td>1/11/2018</td>
+                            <td>3/11/2018</td>
+                            <td>5$</td>
+                            <td>Delivered </td>
+                                    
+                        </tr>
+                                                                                                 
+                      </table>
+                      
+            </div>
+
+            <!--End Registration form-->
+        </form>
+
+    </div>
+ 
+</body>
+</html>

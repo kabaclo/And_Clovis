@@ -41,7 +41,7 @@ ul li {
     padding: 20px;
 }
 ul li:hover {
-    background : rgba(17, 68, 238, 0.933);
+    background :#001f44;
 }
 ul li a {
     color :#fff;
@@ -62,8 +62,7 @@ ul li a {
 #content {
     padding: 10px;
     display: block;
-    margin-left : auto;
-    margin-right: auto;
+    margin: 0 auto;
     width: 50%;
     height: 60%;
     border: 2px skyblue ;
@@ -98,6 +97,7 @@ ul li a {
 #open_close_signUp:checked ~ #sub-registration{
     display: block;
     width: 50%;
+
 }
 
 
@@ -194,12 +194,42 @@ label.input-empty{
 }
 
 .loginBtn:hover{
-    background-color: blue;
+    background-color: #001f44;
 }
 
-.tab-signup, .tab-login{
+.tab-signup, .tab-login, .tab-3{
     float: left;
-    width: 50%;
+    width: 33%;
 }
 
 /*-- end tab-group */
+
+/*-- style my table */
+
+#parcels {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    
+}
+
+#parcels td, #parcels th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    
+}
+
+#parcels tr:nth-child(even){background-color: #f2f2f2;}
+
+#parcels tr:hover {background-color: #ddd;}
+
+#parcels th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color:skyblue;
+    color: white;
+    
+}
+
+/*-- end styling my table */ 
