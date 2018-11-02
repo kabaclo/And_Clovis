@@ -224,7 +224,7 @@ label.input-empty{
         margin-left : auto;
         margin-right: auto;
         width: 100%;
-        border: 2px skyblue solid;
+       
         
     }
     #open_close_menu:checked ~ .main-menu{
