@@ -1,0 +1,24 @@
+{
+  "name": "challenge2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "jasmine",
+    "test-linting": "eslint app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "eslint": "^5.8.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "jasmine": "^3.3.0"
+  },
+  "description": ""
+}

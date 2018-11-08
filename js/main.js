@@ -36,3 +36,7 @@ const showSignUp = () => {
     loginPg.style.display = 'none';
     signUp.style.display = 'block';
 }
+
+const fun = () =>{
+    
+}
