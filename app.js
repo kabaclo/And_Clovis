@@ -79,6 +79,25 @@ app.get ('/api/v1/parcels/:id/cancel',(req,res) =>{
   
 });
 
+app.post ('/api/v1/parcels',(req,res)=>{
+  const id = (Object.keys(parcels).length) + 1;
+  
+   parcels[id] = {
+    sender: req.body.sender,
+    parcelName: req.body.parcelName,
+    from: req.body.from,
+    destination: req.body.destination,
+    current_location: req.body.current_location,
+    weight: req.body.weight,
+    length: req.body.length,
+    submission_date: req.body.submission_date,
+    arrival_date: req.body.arrival_date,
+    status: req.body.status
+  }
+  return res.send (parcels);
+
+});
+
 app.get('/api/v1/user/login/:username/:password', (req, res) => {
   try {
     const response = login({
