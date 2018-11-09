@@ -47,6 +47,10 @@ const login = (params = {}) => {
   return response;
 };
 
+app.get ('/',(req,res)=>{
+  return res.send ('Welcome to Clovis\' API')
+})
+
 app.get('/api/v1/user/login/:username/:password', (req, res) => {
   try {
     const response = login({
@@ -128,5 +132,5 @@ app.get('/api/v1/parcels/:username/:password', (req, res) => {
 });
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
-  // console.log (`listening on port ${port}...`);
+   console.log (`listening on port ${port}...`);
 });

@@ -12,6 +12,9 @@
   "dependencies": {
     "express": "^4.16.4"
   },
+  "engines": {
+    "node": "10.x"
+  },
   "devDependencies": {
     "babel": "^6.23.0",
     "babel-cli": "^6.26.0",
