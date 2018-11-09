@@ -50,7 +50,22 @@ const login = (params = {}) => {
 
 app.get ('/',(req,res)=>{
   return res.send ('Welcome to Clovis\' API')
-})
+});
+
+app.get ('/parcels',(req,res)=>{
+  return res.send (parcels)
+});
+
+app.get ('/parcels/:id',(req,res)=>{
+  const id = req.params.id;
+  if (id in parcels) {
+    return res.send (parcels[id]);
+  }
+  else {
+    return res.send ('The inputed id was not found')
+  }
+   
+});
 
 app.get('/api/v1/user/login/:username/:password', (req, res) => {
   try {
