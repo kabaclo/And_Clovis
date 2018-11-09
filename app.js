@@ -47,6 +47,7 @@ const login = (params = {}) => {
   return response;
 };
 
+
 app.get ('/',(req,res)=>{
   return res.send ('Welcome to Clovis\' API')
 })
