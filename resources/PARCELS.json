@@ -9,7 +9,7 @@
     "length": "45m",
     "submission_date": "10/11/2018",
     "arrival_date": "11/11/2018",
-    "status": "canceled"
+    "status": "In shipping"
   },
   "2": {
     "sender": "bajustone",
@@ -21,7 +21,7 @@
     "length": "45m",
     "submission_date": "10/11/2018",
     "arrival_date": "11/11/2018",
-    "status": "delived"
+    "status": "delivered"
   }
 }
 

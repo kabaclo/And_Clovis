@@ -62,9 +62,21 @@ app.get ('/api/v1/parcels/:id',(req,res)=>{
     return res.send (parcels[id]);
   }
   else {
-    return res.send ('The inputed id was not found')
+    return res.send ('The inputed parcel id was not found');
   }
    
+});
+
+app.get ('/api/v1/parcels/:id/cancel',(req,res) =>{
+  const id = req.params.id;
+  if (id in parcels){
+    parcels[id].status = 'Cancel',
+    res.send (parcels[id])
+  } 
+  else {
+    return res.send ('The inputed parcel id was not found');
+  }
+  
 });
 
 app.get('/api/v1/user/login/:username/:password', (req, res) => {
@@ -150,9 +162,10 @@ app.get('/api/v1/parcels/:username/:password', (req, res) => {
 app.get('/api/v1/users/:username/parcels', (req, res) => {
   
   const username = req.params.username;
-  response = getUserParcels({ username:username });
+  const response = getUserParcels({ username:username });
   res.send(response);
 });
+
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
    console.log (`listening on port ${port}...`);
