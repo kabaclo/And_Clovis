@@ -52,11 +52,11 @@ app.get ('/',(req,res)=>{
   return res.send ('Welcome to Clovis\' API')
 });
 
-app.get ('/parcels',(req,res)=>{
+app.get ('/api/v1/parcels',(req,res)=>{
   return res.send (parcels)
 });
 
-app.get ('/parcels/:id',(req,res)=>{
+app.get ('/api/v1/parcels/:id',(req,res)=>{
   const id = req.params.id;
   if (id in parcels) {
     return res.send (parcels[id]);
@@ -144,6 +144,13 @@ app.get('/api/v1/parcels/:username/:password', (req, res) => {
     response.data = parcels;
     response.success = true;
   }
+  res.send(response);
+});
+
+app.get('/api/v1/users/:username/parcels', (req, res) => {
+  
+  const username = req.params.username;
+  response = getUserParcels({ username:username });
   res.send(response);
 });
 const port = process.env.PORT || 3000;
