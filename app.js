@@ -55,18 +55,18 @@ app.get('/api/v1/parcels', (req, res) => res.send(parcels));
 app.get('/api/v1/parcels/:id', (req, res) => {
   const { id } = req.params;
   if (id in parcels) {
-    return res.send(parcels[id]);
+    return res.status(200).send(parcels[id]);
   }
-  return res.send('The inputed parcel id was not found');
+  return res.status(200).send('The inputed parcel id was not found');
 });
 
 app.get('/api/v1/parcels/:id/cancel', (req, res) => {
   const { id } = req.params;
   if (id in parcels) {
     parcels[id].status = 'Cancel';
-    return res.send(parcels[id]);
+    return res.status(200).send(parcels[id]);
   }
-  return res.send('The inputed parcel id was not found');
+  return res.status(200).send('The inputed parcel id was not found');
 });
 
 app.post('/api/v1/parcels', (req, res) => {
@@ -84,7 +84,7 @@ app.post('/api/v1/parcels', (req, res) => {
     arrival_date: req.body.arrival_date,
     status: req.body.status,
   };
-  return res.send(parcels);
+  return res.status(200).send(parcels);
 });
 
 app.get('/api/v1/user/login/:username/:password', (req, res) => {
@@ -93,9 +93,9 @@ app.get('/api/v1/user/login/:username/:password', (req, res) => {
       username: req.params.username,
       password: req.params.password,
     });
-    res.send(response);
+    res.status(200).send(response);
   } catch (error) {
-    res.send({
+    res.status(200).send({
       success: false,
       error,
     });
@@ -111,13 +111,11 @@ app.post('/api/v1/user/register/', (req, res) => {
 
   if (!(matchEmail.exec(req.body.email))) {
     response.message = 'invalid email';
-    res.send(response);
-    return;
+    return res.status(200).send(response);
   }
   if (req.body.password !== req.body.verifyPassword) {
     response.message = 'password does not match';
-    res.send(response);
-    return;
+    return res.status(200).send(response);
   }
   const user = {
     email: req.body.email,
@@ -131,7 +129,7 @@ app.post('/api/v1/user/register/', (req, res) => {
   };
   users[req.body.username] = user;
 
-  res.send(response);
+  res.status(200).send(response);
 });
 /** Parcels endpoints */
 /* loading parcels from a file */
@@ -164,13 +162,13 @@ app.get('/api/v1/parcels/:username/:password', (req, res) => {
     response.data = parcels;
     response.success = true;
   }
-  res.send(response);
+  res.status(200).send(response);
 });
 
 app.get('/api/v1/users/:username/parcels', (req, res) => {
   const { username } = req.params;
   const response = getUserParcels({ username });
-  res.send(response);
+  res.status(200).send(response);
 });
 
 const port = process.env.PORT || 3000;
