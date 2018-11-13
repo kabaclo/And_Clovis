@@ -48,41 +48,31 @@ const login = (params = {}) => {
 };
 
 
-app.get ('/',(req,res)=>{
-  return res.send ('Welcome to Clovis\' API')
-});
+app.get('/', (req, res) => res.send('Welcome to Clovis\' API'));
 
-app.get ('/api/v1/parcels',(req,res)=>{
-  return res.send (parcels)
-});
+app.get('/api/v1/parcels', (req, res) => res.send(parcels));
 
-app.get ('/api/v1/parcels/:id',(req,res)=>{
-  const id = req.params.id;
+app.get('/api/v1/parcels/:id', (req, res) => {
+  const { id } = req.params;
   if (id in parcels) {
-    return res.send (parcels[id]);
+    return res.send(parcels[id]);
   }
-  else {
-    return res.send ('The inputed parcel id was not found');
-  }
-   
+  return res.send('The inputed parcel id was not found');
 });
 
-app.get ('/api/v1/parcels/:id/cancel',(req,res) =>{
-  const id = req.params.id;
-  if (id in parcels){
-    parcels[id].status = 'Cancel',
-    res.send (parcels[id])
-  } 
-  else {
-    return res.send ('The inputed parcel id was not found');
+app.get('/api/v1/parcels/:id/cancel', (req, res) => {
+  const { id } = req.params;
+  if (id in parcels) {
+    parcels[id].status = 'Cancel';
+    return res.send(parcels[id]);
   }
-  
+  return res.send('The inputed parcel id was not found');
 });
 
-app.post ('/api/v1/parcels',(req,res)=>{
+app.post('/api/v1/parcels', (req, res) => {
   const id = (Object.keys(parcels).length) + 1;
-  
-   parcels[id] = {
+
+  parcels[id] = {
     sender: req.body.sender,
     parcelName: req.body.parcelName,
     from: req.body.from,
@@ -92,10 +82,9 @@ app.post ('/api/v1/parcels',(req,res)=>{
     length: req.body.length,
     submission_date: req.body.submission_date,
     arrival_date: req.body.arrival_date,
-    status: req.body.status
-  }
-  return res.send (parcels);
-
+    status: req.body.status,
+  };
+  return res.send(parcels);
 });
 
 app.get('/api/v1/user/login/:username/:password', (req, res) => {
@@ -179,13 +168,12 @@ app.get('/api/v1/parcels/:username/:password', (req, res) => {
 });
 
 app.get('/api/v1/users/:username/parcels', (req, res) => {
-  
-  const username = req.params.username;
-  const response = getUserParcels({ username:username });
+  const { username } = req.params;
+  const response = getUserParcels({ username });
   res.send(response);
 });
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
-   console.log (`listening on port ${port}...`);
+  console.log(`listening on port ${port}...`);
 });
