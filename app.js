@@ -70,7 +70,7 @@ app.get('/api/v1/parcels/:id/cancel', (req, res) => {
 });
 
 app.post('/api/v1/parcels', (req, res) => {
-  const id = (Object.keys(parcels).length) + 1;
+  const id = `id-${Math.random().toString(36).substr(2, 16)}`;
 
   parcels[id] = {
     sender: req.body.sender,
