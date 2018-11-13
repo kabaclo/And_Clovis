@@ -129,7 +129,7 @@ app.post('/api/v1/user/register/', (req, res) => {
   };
   users[req.body.username] = user;
 
-  res.status(200).send(response);
+  return res.status(200).send(response);
 });
 /** Parcels endpoints */
 /* loading parcels from a file */
