@@ -5,8 +5,8 @@
   "scripts": {
     "test": "jasmine",
     "test-linting": "eslint server/index.js",
-    "start": "node server/index.js",
-    "start-server": "node server/index.js"
+    "start": "node server/index.js"
+    
   },
   "keywords": [],
   "author": "",
