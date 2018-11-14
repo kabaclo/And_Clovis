@@ -17,7 +17,7 @@
     "request": "^2.88.0"
   },
   "engines": {
-    "node": "10.x"
+    "node": "v10.13.0"
   },
   "devDependencies": {
     "babel": "^6.23.0",
