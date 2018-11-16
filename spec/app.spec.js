@@ -3,7 +3,7 @@ const Request = require('request');
 
 
 describe('Server', () => {
-  describe('GET /', () => {
+  describe('GET ../server', () => {
     const data = {};
     beforeAll((done) => {
       Request.get('http://localhost:3000/', (error, response, body) => {
