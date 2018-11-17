@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "main": "server/index.js",
   "scripts": {
-    "test": "jasmine",
+    "test": "jasmine spec/app.spec.js",
     "test-linting": "eslint server/index.js",
-    "start": "node server/index.js"
-    
+    "start": "node server/index.js",
+    "coveralls": "istanbul cover node_modules/jasmine/bin/jasmine.js && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
   },
   "keywords": [],
   "author": "",
@@ -22,9 +22,11 @@
   "devDependencies": {
     "babel": "^6.23.0",
     "babel-cli": "^6.26.0",
+    "coveralls": "^3.0.2",
     "eslint": "^5.9.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.14.0",
+    "istanbul": "^0.4.5",
     "jasmine": "^3.3.0"
   },
   "repository": {
