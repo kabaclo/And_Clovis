@@ -1,0 +1,1 @@
+[![Build Status](https://travis-ci.org/kabaclo/UI.svg?branch=RESTfulAPI)](https://travis-ci.org/kabaclo/UI)
