@@ -6,7 +6,7 @@ describe('Server', () => {
   describe('GET ../server', () => {
     const data = {};
     beforeAll((done) => {
-      Request.get('http://localhost:3000/', (error, response, body) => {
+      Request.get('https://cloandelaapi.herokuapp.com/', (error, response, body) => {
         data.status = response.statusCode;
         data.body = body;
         done();
